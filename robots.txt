@@ -1,0 +1,1 @@
+Sitemap: https://supertuxkart.github.io/stk-website/sitemap.xml

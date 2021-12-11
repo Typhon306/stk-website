@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    var page = window.location.pathname.split('/').pop();
+    var all_pages = ["Community","Discover","Download","Main_Page","Wiimote","Voice_Acting","Translating_STK","Track_Editor_Tutorial","Track_Editor","Terms","Team","Style","Source_control","Scripting","Projects","Privacy","Posters","Music_and_SFX_Guidelines","Media_Repo","Making_challenges","Making_Karts:_Testing","Making_Karts:_Properties","Making_Karts:_Notes","Making_Karts:_Modeling","Making_Karts:_Ideas_and_Concept_Art","Making_Karts:_Animation","Making_Karts","Licensing","Installing_Tools","Installing_Add-Ons","Gallery","File_naming_conventions","FAQ","Donation_Policy","Donate","Communication","Coding_Style","Artist_Debug_Mode","About_releasing_new_versions"];
+
+    var url = '';
+    var exists_page = false;
+    for (var i = 0; i < all_pages.length; i++)
+    {
+        if (page == all_pages[i])
+        {
+            exists_page = true;
+            break;
+        }
+    }
+    if (exists_page)
+    {
+        url = 'https://supertuxkart.github.io' + '/stk-website' + '/' + page;
+    }
+    else
+    {
+        if (!page.endsWith('.md'))
+            page += '.md';
+        <!-- redirect to page creator if not exists -->
+        url = 'https://github.com/supertuxkart/stk-website/new/master?filename=wiki/' + page;
+    }
+    window.location.replace(url);
+</script>
+<noscript>Enable javascript for redirection</noscript>
